@@ -1,1 +1,1 @@
-testing out concepts in C
+new concepts for C programming
