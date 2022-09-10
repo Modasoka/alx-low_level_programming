@@ -6,9 +6,11 @@
 /*
  * main: entry point for the executable C program
  *
- * return: always 0 (success)
+ * Description: 'describes the program'
+ *
+ * Return: always 0 (success)
  */
-int main(void) /* main library to be used for running the program */
+int main(void)
 {
 	int n;
 
