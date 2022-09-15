@@ -1,0 +1,1 @@
+Introduction to debugging, different methods of manual debugging and the know-how to approaching error messages and how to read them
