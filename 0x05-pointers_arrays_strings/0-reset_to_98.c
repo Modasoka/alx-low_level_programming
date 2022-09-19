@@ -1,9 +1,11 @@
 #include "main.h"
-#include<stdio.h>
+
 /**
- *main - execution of program begins at this point
- *
- *
- *Return: always 0.
+ * main - execution of program begins at this point
+ * @n: variable set to be manipulated
+ * Return: no value (nothing)
  */
 
+void reset_to_98(int *n)
+{
+	*n = 98 /*  */
