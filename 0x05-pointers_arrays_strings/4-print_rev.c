@@ -2,11 +2,11 @@
 
 int _strlen(char *s);
 /**
- * print_rev - functions that prints string in reverse followed by new line
- * @s: string that is to be printed
- *
- * Return: nothing
- */
+* print_rev - function that prints string in reverse, followed by new line
+* @s: string that is to be printed in reverse
+* Return: nothing
+*
+*/
 
 void print_rev(char *s)
 {
@@ -25,10 +25,10 @@ void print_rev(char *s)
 
 
 /**
- * _strlen - function that returns the length of a string
- * @s: string whose length is to be determined by the function
- * Return: Always 0
- */
+* _strlen - function that returns length of a string
+* @s: string whose length is to be determined by the function
+* Return: Always 0
+*/
 
 int _strlen(char *s)
 {
