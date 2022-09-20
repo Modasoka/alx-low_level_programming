@@ -1,0 +1,12 @@
+#include "main.h"
+
+/**
+ * _atoi - function that converts a string to an interger
+ * @s - string that is to be converted to an interger by the function
+ *
+ * Return: value must return as 0
+ */
+
+int _atoi(char *s)
+{
+}
