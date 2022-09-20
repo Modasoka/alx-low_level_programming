@@ -1,47 +1,45 @@
 #include "main.h"
-<<<<<<< HEAD
-=======
 
 /**
- * _atoi - function that converts a string to an interger
- * @s: string to be converted to interger
- * Return: the converted string, otherwise 0 if no numbers
- *         are present in string
- */
+* _atoi - function that converts a string to an integer.
+* @s: the string to be converted by the function
+* Return: the converted string, otherwise will return 0 if
+*         there are no number in strings
+*/
 
 int _atoi(char *s)
 
 {
-  short boolean;
-  int i, minus, result;
+	short boolean;
 
+	int i, minus, result;
 
-  i = minus = result = boolean = 0;
+	i = minus = result = boolean = 0;
 
-  minus = -1;
+	minus = -1;
 
-  while (s[i] != '\0')
-    {
-
-      if (s[i] == '-')
-
-	minus *= -1;
-      if (s[i] >= '0'&& s[i] <= '9')
+	while (s[i] != '\0')
 	{
+		if (s[i] == '-')
 
-	  result *= 10;
-	  result -= (s[i] - '0');
-	  boolean = 1;
+			minus *= -1;
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			result *= 10;
 
+			result -= (s[i] - '0');
+
+			boolean = 1;
+		}
+
+		else if (boolean == 1)
+
+			break;
+
+		i++;
 	}
-      else if (boolean == 1)
 
-	break;
+	result *= minus;
 
-      i++;
-    }
-  result *= minus;
-
-  return (result);
+	return (result);
 }
->>>>>>> d98c76baccbde3cafb7a4dbbe8dcec4dfec6dd20
