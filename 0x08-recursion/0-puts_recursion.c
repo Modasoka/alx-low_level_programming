@@ -2,10 +2,11 @@
 #include <string.h>
 
 /**
- * _puts_recursion: function that prints string followed by new line
- * @s: string to be printed by the above function
- * Return: returns no value
- */
+* _puts_recursion - funtcion that prints a string followed by a new line
+* @s: string to be printed byt the above function
+*
+* Return: returns nothing
+*/
 
 void _puts_recursion(char *s)
 {
