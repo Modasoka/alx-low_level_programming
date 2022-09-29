@@ -1,14 +1,16 @@
 #include "main.h"
 
 /**
- * prime2 - function that makes it possible to evaluate from 1 to n
- * @a: same number as n
- * @b: number that iterates from 1 to n
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
+* prime2 - function that makes possible to evaluate from 1 to n
+* @a: same number as n
+* @b: number that iterates from 1 to n
+*
+* Return: On success 1.
+* On error, -1 is returned, and errno is set appropriately.
+*/
+
 int prime2(int a, int b)
+
 {
 	if (a == b)
 		return (1);
@@ -16,14 +18,17 @@ int prime2(int a, int b)
 		return (0);
 	return (prime2(a, b + 1));
 }
+
 /**
- * is_prime_number - function that checks if a number is prime
- * @n: Number Integer
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
+* is_prime_number - function that checks if a number is prime
+* @n: Number Integer
+*
+* Return: On success 1.
+* On error, -1 is returned, and errno is set appropriately.
+*/
+
 int is_prime_number(int n)
+
 {
 	if (n <= 1)
 		return (0);
