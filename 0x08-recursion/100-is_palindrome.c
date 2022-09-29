@@ -8,11 +8,13 @@
  * Return: On success 1, otherwise -1 (error appropriately set)
  */
 int palind2(char *a, int l)
+
 {
 	if (*a == 0)
 		return (l - 1);
 	return (palind2(a + 1, l + 1));
 }
+
 /**
  * palind3 - function that compares string vs string reverse
  * @a: string
@@ -22,6 +24,7 @@ int palind2(char *a, int l)
  */
 
 int palind3(char *a, int l)
+
 {
 	if (*a != *(a + l))
 		return (0);
@@ -29,6 +32,7 @@ int palind3(char *a, int l)
 		return (1);
 	return (palind3(a + 1, l - 2));
 }
+
 /**
  * is_palindrome - function that checks if a string is a palindrome
  * @s: string to be evaluated
@@ -36,6 +40,7 @@ int palind3(char *a, int l)
  * Return: On success 1, otherwise -1 (error appropriately set)
  */
 int is_palindrome(char *s)
+
 {
 	int l;
 
