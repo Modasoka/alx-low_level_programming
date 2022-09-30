@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - program that prints its name followed by new line
+ * main - program that prints all the arguments it receives
  * @argc: argument count
  * @argv: argunment vector
  *
@@ -11,14 +11,15 @@
 
 int main(int argc, char *argv[])
 {
-	int count;
+	int count = 0;
 
-	for (count = 0; count < argc; count++)
+	if (argc > 0)
 	{
-		if (argc == 1)
+		while (count < argc)
+		{
 			printf("%s\n", argv[count]);
-		else
-			break;
+			count++;
+		}
 	}
 	return (0);
 }
