@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/HP/Documents/GitHub/alx-low_level_programming/0x07-pointers_arrays_strings",
-      "program": "c:/Users/HP/Documents/GitHub/alx-low_level_programming/0x07-pointers_arrays_strings/build/Debug/outDebug",
+      "cwd": "c:/Users/HP/Documents/GitHub/alx-low_level_programming/0x0A-argc_argv",
+      "program": "c:/Users/HP/Documents/GitHub/alx-low_level_programming/0x0A-argc_argv/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
