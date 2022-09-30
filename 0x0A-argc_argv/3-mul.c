@@ -10,6 +10,7 @@
  */
 
 int main(int argc, char *argv[])
+
 {
 	int count, num1, num2, res;
 
