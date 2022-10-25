@@ -1,11 +1,11 @@
 #include "lists.h"
 
 /**
-* print_list - prints all elements of a list_t list
-*              if str is NULL, print [0] (nil)
-* @h: linked list of type list_t
+* print_list - this function prints all elements of a list
+*              prints 0 if the string is NULL
+* @h: the linked list (list_t)
 *
-* Return: number of nodes
+* Return: teturns the number of nodes
 */
 
 size_t print_list(const list_t *h)
