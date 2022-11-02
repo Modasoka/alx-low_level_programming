@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * clear_bit - sets the value of a bit at a given index to 0
+ * clear_bit - this fuinction sets the value of bit to 0 at given index
  * @n: number to be converted to binary first
  * @index: position of bit in binary number
  * Return: 1 if it worked, -1 if error occured

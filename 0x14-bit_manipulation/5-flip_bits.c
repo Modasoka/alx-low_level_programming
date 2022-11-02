@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * flip_bits - returns the number of bits one would need to flip
+ * flip_bits - function that returns number of bits one would need to flip
  *              to get from one number to another
- * @n: first number
- * @m: second number
+ * @n: the first number
+ * @m: the second number
  * Return: number of bits
  */
 

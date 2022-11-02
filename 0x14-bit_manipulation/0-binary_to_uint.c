@@ -3,10 +3,10 @@
 unsigned int _pow(unsigned int base, int index);
 
 /**
-* binary_to_uint - converts a binary number to an unsigned int
+* binary_to_uint - function that converts binary number to unsigned int
 * @b: string of 0 and 1 chars
 *
-* Return: converted number, 0 if b is NULL
+* Return: returns the converted number, 0 if b is NULL
 *         or if there's one or more chars that are not 0 or 1
 */
 
@@ -38,10 +38,10 @@ unsigned int binary_to_uint(const char *b)
 }
 
 /**
- * _pow - computes power of an integer
+ * _pow - function that computes power of an integer
  * @base: base
  * @index: power
- * Return: integer raised to power
+ * Return: the integer raised to a power
  */
 
 unsigned int _pow(unsigned int base, int index)

@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_binary - prints the binary representation of a number
- * @n: integer to be converted
+ * print_binary - this function prints the binary representation of a number
+ * @n: the integer to be converted
  *
  * Return: nothing
  */

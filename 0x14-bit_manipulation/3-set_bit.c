@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * set_bit - sets the value of a bit at a given index to 1
- * @n: number to be converted to binary first
+ * set_bit - function that sets value of a bit at a given index to 1
+ * @n: the number to be converted to binary first
  * @index: position of bit in binary number
  * Return: bit at index, or -1 if error occured
  */
