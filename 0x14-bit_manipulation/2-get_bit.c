@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_bit - function that returns the value of a bit at given index
+ * get_bit - this function returns the value of a bit at given index
  * @n: number to be converted first to binary
  * @index: the position of bit in binary number
  * Return: bit at index, or -1 if error occured
