@@ -1,25 +1,60 @@
 #include "main.h"
 
+unsigned int _pow(unsigned int base, int index);
+
 /**
- * binary_to_uint - converts a binary number to unsigned int
- * @b: string containing the binary number
- *
- * Return: the converted number
- */
+* binary_to_uint - converts a binary number to an unsigned int
+* @b: string of 0 and 1 chars
+*
+* Return: converted number, 0 if b is NULL
+*         or if there's one or more chars that are not 0 or 1
+*/
+
 unsigned int binary_to_uint(const char *b)
 {
-	int i;
-	unsigned int dec_val = 0;
+	int len = 0;
+	int power = 0;
+	int output = 0;
 
-	if (!b)
+	if (b == NULL)
 		return (0);
 
-	for (i = 0; b[i]; i++)
+	for (; *(b + len) != '\0'; len++)
 	{
-		if (b[i] < '0' || b[i] > '1')
+		if (b[len] != '0' && b[len] != '1')
 			return (0);
-		dec_val = 2 * dec_val + (b[i] - '0');
 	}
+	--len;
 
-	return (dec_val);
+	for (; len >= 0; len--)
+	{
+		if (b[len] == '1')
+		{
+			output += _pow(2, power);
+		}
+		power++;
+	}
+	return (output);
+}
+
+/**
+ * _pow - computes power of an integer
+ * @base: base
+ * @index: power
+ * Return: integer raised to power
+ */
+
+unsigned int _pow(unsigned int base, int index)
+{
+	unsigned int product = 1;
+
+	if (index == 0)
+		return (1);
+
+	while (index > 0)
+	{
+		product *= base;
+		index--;
+	}
+	return (product);
 }
