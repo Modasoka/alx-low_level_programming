@@ -12,29 +12,29 @@ unsigned int _pow(unsigned int base, int index);
 
 unsigned int binary_to_uint(const char *b)
 {
-    int len = 0;
-    int power = 0;
-    int output = 0;
+	int len = 0;
+	int power = 0;
+	int output = 0;
 
-    if (b == NULL)
-        return (0);
+	if (b == NULL)
+		return (0);
 
-    for (; *(b + len) != '\0'; len++)
-    {
-        if (b[len] != '0' && b[len] != '1')
-            return (0);
-    }
-    --len;
+	for (; *(b + len) != '\0'; len++)
+	{
+		if (b[len] != '0' && b[len] != '1')
+			return (0);
+	}
+	--len;
 
-    for (; len >= 0; len--)
-    {
-        if (b[len] == '1')
-        {
-            output += _pow(2, power);
-        }
-        power++;
-    }
-    return (output);
+	for (; len >= 0; len--)
+	{
+		if (b[len] == '1')
+		{
+			output += _pow(2, power);
+		}
+		power++;
+	}
+	return (output);
 }
 
 /**
@@ -46,15 +46,16 @@ unsigned int binary_to_uint(const char *b)
 
 unsigned int _pow(unsigned int base, int index)
 {
-    unsigned int product = 1;
+	unsigned int product = 1;
 
-    if (index == 0)
-        return (1);
+	if (index == 0)
+		return (1);
 
-    while (index > 0)
-    {
-        product *= base;
-        index--;
-    }
-    return (product);
+	while (index > 0)
+	{
+		product *= base;
+		index--;
+	}
+	return (product);
 }
+
