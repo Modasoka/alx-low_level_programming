@@ -9,25 +9,29 @@
  * Return: returns the number of characters read and printed
 */
 
-ssize_t read_textfile(const char *filename, size_t letters) {
-    FILE *fp;
-    size_t i = 0;
-    int c;
+ssize_t read_textfile(const char *filename, size_t letters)
+{
+	FILE *fp;
+	size_t i = 0;
+	int c;
 
-    if (filename == NULL)
-        return (0);
+	if (filename == NULL)
+		return (0);
 
-    fp = fopen(filename, "r");
-    if (fp == NULL)
-        return (0);
+	fp = fopen(filename, "r");
 
-    c = fgetc(fp);
+	if (fp == NULL)
+		return (0);
 
-    while (i < letters && c != EOF) {
-        write(STDOUT_FILENO, &c, 1);
-        c = fgetc(fp);
-        i++;
-    }
-    fclose(fp);
-    return (i);
+	c = fgetc(fp);
+
+	while (i < letters && c != EOF)
+	{
+		write(STDOUT_FILENO, &c, 1);
+		c = fgetc(fp);
+		i++;
+	}
+	fclose(fp);
+	return (i);
 }
+
