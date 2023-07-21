@@ -73,37 +73,8 @@ int elf_data(const unsigned char *buffer)
 void elf_version(const unsigned char *buffer)
 {
 	printf("  %-34s %u", "Version:", buffer[EI_VERSION]);
-	
-	unsigned char buffer[18];
-        unsigned int bit_mode;
-        int big_endian;
-        int fd;
 
-        if (argc != 2)
-        {
-                write(STDERR_FILENO, "Usage: elf_header elf_filename\n", 31);
-                exit(98);
-        }
-
-        fd = open(argv[1], O_RDONLY);
-        if (fd == -1)
-        {
-                write(STDERR_FILENO, "Error: Can't read from file\n", 28);
-                exit(98);
-        }
-
-        _read(fd, (char *) buffer, 18);
-
-        elf_magic(buffer);
-        bit_mode = elf_class(buffer);
-        big_endian = elf_data(buffer);
-        elf_version(buffer);
-        elf_osabi(buffer);
-        elf_abivers(buffer);
-        elf_type(buffer, big_endian);
-
-        lseek(fd, 24, SEEK_SET);
-        _read(fd, (char *) bu	if (buffer[EI_VERSION] == EV_CURRENT)
+	if (buffer[EI_VERSION] == EV_CURRENT)
 		printf(" (current)\n");
 	else
 		printf("\n");
