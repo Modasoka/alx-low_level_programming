@@ -5,7 +5,8 @@
  * a binary number
  * @b: this is a ptr to a str that contains a binary number
  *
- * Return:returns an unsigned int with decimal val of a binary num or 0 on error
+ * Return:returns an unsigned int with decimal val of a binary num,
+ * otherwise returns 0 on error
  */
 
 unsigned int binary_to_uint(const char *b)
