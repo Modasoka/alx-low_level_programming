@@ -1,36 +1,56 @@
 #include "search_algos.h"
+#include <math.h>
+
+size_t min(size_t a, size_t b);
 
 /**
- * jump_search - searches for value in sorted array of ints
+ * min - returns the min of two size_t values
+ * @a: first value
+ * @b: second value
  *
- * @array: ptr to first element of array to search in
- * @size:  no of elements in array
+ * Return: returns `a` if lower or equal to `b`, `b` otherwise
+ */
+size_t min(size_t a, size_t b)
+{
+	return (a <= b ? a : b);
+}
+
+/**
+ * jump_search - search for value in sorted array of integers using
+ * 				 jump search algorithm
+ * @array: ptr to first element of array to search
+ * @size: no of elements in array
  * @value: value to search for
- * Return: 1st index where value is located
+ *
+ * Return: returns first index containing `value`, or -1 if `value` not found or
+ * 		   `array` is NULL
  */
 
 int jump_search(int *array, size_t size, int value)
 {
-	size_t ii, step, jumper;
+	size_t low, high, jump;
 
-	if (array == NULL || size == 0)
+	if (!array || size == 0)
 		return (-1);
 
-	step = sqrt(size);
+	jump = sqrt(size);
 
-	for (ii = jumper = 0; jumper < size && array[jumper] < value;)
+	for (high = 0; high < size && array[high] < value;
+	     low = high, high += jump)
 	{
-		printf("Value checked array [%ld] = [%d]\n", jumper, array[jumper]);
-		ii = jumper;
-		jumper += step;
+		printf("Value checked array[%lu] = [%d]\n",
+		       high, array[high]);
 	}
 
-	printf("Value found between indexes [%ld] and [%ld]\n", ii, jumper);
+	/* causes 'found' msg even when value not in array */
+	printf("Value found between indexes [%lu] and [%lu]\n", low, high);
 
-	jumper = jumper > size - 1 ? jumper : size - 1;
-	for (; ii < jumper && array[ii] < value; ii++)
-		printf("Value checked array [%ld] = [%d]\n", ii, array[ii]);
-	printf("Value checked array [%ld] = [%d]\n", ii, array[ii]);
+	for (; low <= min(high, size - 1); low++)
+	{
+		printf("Value checked array[%lu] = [%d]\n", low, array[low]);
+		if (array[low] == value)
+			return (low);
+	}
 
-	return (array[ii] == value ? (int)ii : -1);
+	return (-1);
 }
