@@ -21,7 +21,6 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 -   **Choosing the Best Search Algorithm**: Knowing how to select the most suitable search algorithm based on the specific requirements and characteristics of the data being searched.
     
 
-----------
 
 ## Brief Explanation of Concepts
 
@@ -41,6 +40,6 @@ Binary search is a highly efficient search algorithm used to find the position o
 
 Selecting the most appropriate search algorithm depends on various factors, including the size of the dataset, the structure of the data, and the efficiency requirements. Linear search is suitable for small datasets or when the elements are not ordered, while binary search excels in large datasets with sorted elements. Understanding the characteristics of each algorithm enables informed decision-making when implementing search functionality in applications.
 
-#
+----------
 
 This README provides an overview of search algorithms, including linear search and binary search, along with guidelines for selecting the best algorithm based on specific requirements. It aims to equip readers with a fundamental understanding of search algorithms and their applications.
