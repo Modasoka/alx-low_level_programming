@@ -2,7 +2,6 @@
 104-advanced_binary.c
 106-linear_skip.c
 1-binary_recursive.c
-100-jump.c
 103-exponential.c
 105-jump_list.c
 test_main.c
