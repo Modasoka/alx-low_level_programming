@@ -20,7 +20,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
     
 -   **Choosing the Best Search Algorithm**: Knowing how to select the most suitable search algorithm based on the specific requirements and characteristics of the data being searched.
     
-
+#
 
 ## Brief Explanation of Concepts
 
